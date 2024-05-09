@@ -22,6 +22,7 @@
             $pid = $_GET['pid'];
             $ret = getProducts($con, null, $pid);
             $product = mysqli_fetch_assoc($ret);
+            $cat_id= getCategroyByID($con, $product['category_id']);
         }
 
     ?>
@@ -32,9 +33,9 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>Vegetable’s Package</h2>
+                        <h2><?php echo $product['product_name']?></h2>
                         <div class="breadcrumb__option">
-                            <a href="./index.html">Home</a>
+                            <a href="./index.html"><?php echo $product['product_name']?></a>
                             <a href="./index.html">Vegetables</a>
                             <span>Vegetable’s Package</span>
                         </div>
