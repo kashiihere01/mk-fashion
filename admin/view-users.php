@@ -56,10 +56,10 @@
                     <thead>
                         <tr>
                             <th>Image</th>
-                            <th>Name</th>
+                            <th>User Name</th>
                             <th>Email</th>
                             <th>Mobile</th>
-                            <th>Address</th>
+                            
                             <th>Status</th>
                             <th>Actions</th>
                         </tr>
@@ -86,7 +86,7 @@
                                     <td><?= $row['name'] ?></td>
                                     <td><?= $row['email'] ?></td>
                                     <td><?= $row['mobile'] ?></td>
-                                    <td><?= $row['address'] ?></td>
+                                   
                                     <td>
                         <?php if($user_status == 1){
                         echo "<span class='badge bg-success'>Active</span>";

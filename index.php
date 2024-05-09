@@ -72,22 +72,7 @@
                     <div class="section-title">
                         <h2>Featured Product</h2>
                     </div>
-                    <div class="featured__controls">
-                        <ul>
-                            <li class="active" data-filter="*">All</li>
-                            <?php //print_r(mysqli_fetch_assoc($cats)) ?>
-                            <?php while ($ct = mysqli_fetch_assoc($cats)) { ?>
-                                <li data-filter=".<?=$ct['category']?>"><?php echo $ct['category']?></li>
-                            <?php }
-                            //mysql_data_seek($result_work_id, 0);
-                            ?>
-
-
-<!--                            <li data-filter=".fresh-meat">Fresh Meat</li>-->
-<!--                            <li data-filter=".vegetables">Vegetables</li>-->
-<!--                            <li data-filter=".fastfood">Fastfood</li>-->
-                        </ul>
-                    </div>
+                   
                 </div>
             </div>
             <div class="row featured__filter">

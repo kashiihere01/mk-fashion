@@ -7,12 +7,12 @@ require_once "./includes/helpers.php";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // get data from form...
-    $category = $_POST['category'];
+  
     $product_name = $_POST['name'];
     $product_price = $_POST['unit_price'];
 
-    $product_id = $_POST['id'];
-    $product_description = $_POST['product_description'];
+    $id = $_POST['id'];
+    $product_description = $_POST['description'];
 
 
     // check if image is update or not
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // update qry run here....
 
-    $query = "UPDATE `products` SET `product_name`='$product_name',`product_description`='$product_description',`product_price`='$product_price',`product_image`='$name' WHERE `category_id`='$category'";
+    $query = "UPDATE `products` SET `product_name`='$product_name',`product_description`='$product_description',`product_price`='$product_price',`product_image`='$name' WHERE `id`='$id'";
 
     if (mysqli_query($con, $query)) {
 

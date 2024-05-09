@@ -55,7 +55,7 @@ if (mysqli_num_rows($result) > 0) {
 
             <div class="form-container">
                 <form action="./product-update-qry.php" method="POST" enctype="multipart/form-data" class="row">
-
+<input type="hidden" name="id" value="<?= $get_product_id ?>">
                     <div class="col-lg-6 mb-2">
                         <label class="form-label" for="name">Name <span class="text-danger">*</span>
                         </label>
@@ -85,10 +85,17 @@ if (mysqli_num_rows($result) > 0) {
 
                             if (mysqli_num_rows($result) > 0) {
 
-                                while ($row = mysqli_fetch_assoc($result)) {
+                                while ($row2 = mysqli_fetch_assoc($result)) {
+                                    if($row2['id'] == $row['category_id']){
+                                        $selected = "selected";
+                                    }
+                                    else{
+                                        $selected = "";
+
+                                    }
                             ?>
 
-                                    <option value="<?php echo $row['id'] ?>"> <?php echo $row['category'] ?> </option>
+                                    <option <?=  $selected ?> value="<?php echo $row2['id'] ?>"> <?php echo $row2['category'] ?> </option>
 
                             <?php  }
                             } ?>
@@ -109,7 +116,7 @@ if (mysqli_num_rows($result) > 0) {
                     <div class="col-lg-12 mb-2">
                         <label class="form-label" for="val-username">Description <span class="text-danger">*</span>
                         </label>
-                        <textarea name="description" class="form-control" id=""  rows="5"><?= $product_description  ?></textarea>
+                        <textarea name="description" class="form-control" id=""  rows="5"><?= $row['product_description'];  ?></textarea>
                     </div>
 
                     <div class="offset-8 col-lg-4 mb-2">

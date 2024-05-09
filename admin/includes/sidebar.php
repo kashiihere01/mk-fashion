@@ -33,8 +33,8 @@
                     </li>
 
                     <li>
-                        <a href="#" aria-expanded="false">
-                            <i class="fa-solid fa-cart-shopping text-success fa-lg"></i> <span class="nav-text ml-2"> Orders</span>
+                        <a href="user-messages.php" aria-expanded="false">
+                            <i class="fa-solid fa-envelope text-success fa-lg"></i> <span class="nav-text ml-2"> User Messages</span>
                         </a>
                     </li>
 
