@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Profile - Ogani</title>
+    <title>Profile - Mk Fashion</title>
 
     <!-- css-links include -->
     <?php require_once("./includes/css-links.php") ?>
@@ -26,16 +26,17 @@
 
         <!-- Add and View Users -->
         <?php if ($_SESSION['user_role'] === "admin") {
-            echo "
-            <div class='row page-titles mx-0'>
-            <div class='col p-md-0'>
-                <ol class='breadcrumb'>
-                    <li class='breadcrumb-item'><a href='add-user.php'>Add <span class='text-success'>User</span></a></li>
-                    <li class='breadcrumb-item active'><a href='view-users.php'>View <span class='text-success'>Users</span></a></li>
-                </ol>
+            echo '
+            
+            <div class="d-flex justify-content-end">
+                <a href="./add-user.php" class="btn btn-success text-white"><i class="fa fa-plus"></i> Add Users</a>
             </div>
-        </div>
-            ";
+            <div class="d-flex justify-content-end">
+                <a href="./add-user.php" class="btn btn-success text-white"><i class="fa fa-plus"></i> Add Users</a>
+            </div>
+
+        
+            ';
         } ?>
 
 
@@ -57,13 +58,11 @@
                             <ul class="card-profile__info">
                                 <li class="mb-2"><strong class="text-dark mr-4">Mobile</strong> <span><?= $_SESSION['user_mobile'] ?></span></li>
                                 <li class="mb-2"><strong class="text-dark mr-4">Email</strong> <span><?= $_SESSION['user_email'] ?></span></li>
-                                <li class="mb-2"><strong class="text-dark mr-4">Address</strong> <span><?= $_SESSION['user_address'] ?></span></li>
+                                
 
                             </ul>
 
-                            <h4>About Me</h4>
-                            <p class="text-muted" align='justify'><?= $_SESSION['user_description'] ?></p>
-
+                            
                             <div class="row my-2">
                                 <div class="col-12 text-center">
                                     <button class="btn btn-danger px-5">Edit Profile <i class="fa fa-edit"></i></button>

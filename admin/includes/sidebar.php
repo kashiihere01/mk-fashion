@@ -27,8 +27,8 @@
                     </li>
 
                     <li>
-                        <a href="#" aria-expanded="false">
-                            <i class="fa-solid fa-users text-success fa-lg"></i> <span class="nav-text ml-2"> Customers</span>
+                        <a href="customers.php" aria-expanded="false">
+                            <i class="fa-solid fa-users text-success fa-lg"></i> <span class="nav-text ml-2">  Customers</span>
                         </a>
                     </li>
 

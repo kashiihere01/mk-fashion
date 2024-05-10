@@ -25,23 +25,16 @@
                 <a href="#"><i class="fa fa-user"></i> Register |</a>
             </div>
             <div class="header__top__right__auth">
-                <a href="#"><i class="fa fa-user"></i> Login</a>
+                <a href="login.php"><i class="fa fa-user"></i> Login</a>
             </div>
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="./index.html">Home</a></li>
-                <li><a href="./shop-grid.html">Shop</a></li>
-                <li><a href="#">Pages</a>
-                    <ul class="header__menu__dropdown">
-                        <li><a href="./product-details.html">Shop Details</a></li>
-                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                        <li><a href="./checkout.html">Check Out</a></li>
-                    
-                    </ul>
-                </li>
+                <li class="active"><a href="../index.php">Home</a></li>
+                <li><a href="products.php">Products</a></li>
+                <li><a href="about.php">About</a></li>
             
-                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="contact.php">Contact</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -78,7 +71,7 @@
                             <div class="header__top__right__social">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-whatsapp"></i></a>
-                                <a href="#"><i class="fa-brand fa-tiktok"></i></a>
+                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
                                 <a href="#"><i class="fa fa-pinterest-p"></i></a>
                             </div>
 
@@ -86,7 +79,7 @@
                                 <a href="#"><i class="fa fa-user"></i> Register |</a>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="#"><i class="fa fa-user"></i> Login</a>
+                                <a href="login.php"><i class="fa fa-user"></i> Login</a>
                             </div>
                         </div>
                     </div>
@@ -97,24 +90,17 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <!-- <a href="./index.html"><img src="img/logo.jpg" alt=""></a> -->
+                    
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
                             <li class="active"><a href="./index.php">Home</a></li>
-                            <li><a href="./shop-grid.php">Shop</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.php">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.php">Shoping Cart</a></li>
-                                    <li><a href="./checkout.php">Check Out</a></li>
-                                   
-                                </ul>
-                            </li>
+                            <li><a href="products.php">Shop</a></li>
+                            <li><a href="about.php">About</a></li>
                            
-                            <li><a href="./contact.php">Contact</a></li>
+                            <li><a href="contact.php">Contact</a></li>
                         </ul>
                     </nav>
                 </div>

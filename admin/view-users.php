@@ -30,6 +30,8 @@
                 <div class="col-md-4">
                     <h3> <i class="fa fa-eye text-success"></i>View Users</h3>
                 </div>
+                <hr>
+            
                 <div class="col-md-8">
                     <?php
 
@@ -47,9 +49,7 @@
 
             <hr>
 
-            <div class="d-flex justify-content-end">
-                <a href="./add-products.php" class="btn btn-success text-white"><i class="fa fa-plus"></i> Add Proudcts</a>
-            </div>
+            
 
             <div class="table-responsive">
                 <table class="table table-striped table-bordered zero-configuration">
@@ -59,7 +59,6 @@
                             <th>User Name</th>
                             <th>Email</th>
                             <th>Mobile</th>
-                            
                             <th>Status</th>
                             <th>Actions</th>
                         </tr>
@@ -74,7 +73,7 @@
                         $get_users = "SELECT * FROM users";
 
                         $result = mysqli_query($con, $get_users);
- $user_status = $row['student_status'];
+ 
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
 
@@ -83,27 +82,28 @@
 
                                 <tr>
                                     <td><img src="./images/admin-users/<?php echo $row['image'] ?>" alt="Product Image" height="60px"></td>
-                                    <td><?= $row['name'] ?></td>
+                                    <td><?= $row['username'] ?></td>
                                     <td><?= $row['email'] ?></td>
-                                    <td><?= $row['mobile'] ?></td>
+                                    <td><?= $row['mobile'] ?></td> 
                                    
                                     <td>
-                        <?php if($user_status == 1){
-                        echo "<span class='badge bg-success'>Active</span>";
+                        <?php if($row['status'] == 1){
+                        echo "<span class='badge bg-success text-white'>Active</span>";
                     }
-                    else if($student_status == 0){
-                        echo "<span class='badge bg-warning'>Inactive</span>";
+                    else if($row['status'] == 0){
+                        echo "<span class='badge bg-warning text-white'>Inactive</span>";
                     }
                     else{
-                        echo "<span class='badge bg-danger'>removed</span>";
+                        echo "<span class='badge bg-danger text-white'>removed</span>";
                     }
                      ?></td>
-                    <td>
-                                    <td>
+                  <td>
                                         <div class="dropdown">
                                             <button type="button" class="btn btn-success text-white dropdown-toggle" data-toggle="dropdown">Actions</button>
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="user-edit-qry.php?id=<?= $row['id'] ?>"><i class="fa fa-edit"></i> Edit</a>
+                                                <a class="dropdown-item" href="active.php?id=<?= $row['id'] ?>"> Active</a>
+                                                <a class="dropdown-item" href="inactive.php?id=<?= $row['id'] ?>"> Inactive</a>
                                                 <a class="dropdown-item" href="user-delete-qry.php?id=<?= $row['id'] ?>"><i class="fa fa-trash"></i> Delete</a>
                                             </div>
                                         </div>

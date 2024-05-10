@@ -15,7 +15,7 @@ require_once "./auth.php";
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Messages - Home</title>
+    <title>Customers - Home</title>
 
     <!-- css-links include -->
     <?php require_once "./includes/css-links.php" ?>
@@ -35,7 +35,7 @@ require_once "./auth.php";
 
         <!-- view categories container -->
         <div class="container mt-3 bg-white p-4">
-            <h3> <i class="fa fa-eye text-success"></i> View Messages</h3>
+            <h3> <i class="fa fa-eye text-success"></i> View users</h3>
             <hr>
 
 
@@ -45,8 +45,8 @@ require_once "./auth.php";
                         <tr>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Message</th>
-                            <th>Status</th>
+                            <th>Mobile</th>
+                            <th>City</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -54,7 +54,7 @@ require_once "./auth.php";
 
                     <?php
 require_once "./db-con.php";
-                        $select = "SELECT * FROM users_messages";
+                        $select = "SELECT * FROM customers";
                         $result = mysqli_query($con, $select);
 
                         if (mysqli_num_rows($result) > 0) {
@@ -64,25 +64,14 @@ require_once "./db-con.php";
                                 <tr>
                                     <td><?php echo $row['name'] ?></td>
                                     <td><?php echo $row['email'] ?></td>
-                                    <td><?php echo $row['message'] ?></td>
-                                  
-                                    <td>
-                        <?php if($row['status'] == 1){
-                        echo "<span class='badge bg-success text-white'>Read</span>";
-                    }
-                    else if($row['status'] == 0){
-                        echo "<span class='badge bg-warning text-white'>unread</span>";
-                    }
-                    else{
-                        echo "<span class='badge bg-danger'>removed</span>";
-                    }
-                     ?></td>
+                                    <td><?php echo $row['mobile'] ?></td>
+                                    <td><?php echo $row['city'] ?></td>
                                     <td>
                                         <div class="dropdown">
                                             <button type="button" class="btn btn-success text-white dropdown-toggle" data-toggle="dropdown">Actions</button>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="read.php?id=<?= $row['id'] ?>"><i class="fa fa-eye"></i> Read</a>
-                                                <a class="dropdown-item" href="unread.php?id=<?= $row['id'] ?>"><i class="fa fa-unread"></i> Unread</a>
+                                                <a class="dropdown-item" href="category-edit.php?id=<?= $row['id'] ?>"><i class="fa fa-edit"></i> Edit</a>
+                                                <a class="dropdown-item" href="category-delete-qry.php?id=<?= $row['id'] ?>"><i class="fa fa-trash"></i> Delete</a>
                                             </div>
                                         </div>
                                     </td>

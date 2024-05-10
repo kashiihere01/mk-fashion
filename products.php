@@ -204,6 +204,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- sale offf -->
                 <div class="col-lg-9 col-md-7">
                     <div class="product__discount">
                         <div class="section-title product__discount__title">

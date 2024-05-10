@@ -17,8 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-        $query = "INSERT INTO `users`(`name`, `email`, `password`, `mobile`, `address`, `description`, `image`) 
-            VALUES ('$_POST[name]','$_POST[email]' ,'$password','$_POST[mobile]','$_POST[address]','$_POST[description]' , '$imgName')";
+        $query = "INSERT INTO `users`(`username`, `email`, `password`, `mobile`, `image`) 
+            VALUES ('$_POST[username]','$_POST[email]' ,'$password','$_POST[mobile]' , '$imgName')";
 
         if (mysqli_query($con, $query)) {
             $_SESSION['success'] = "Operation Perfomed Successfully...!";

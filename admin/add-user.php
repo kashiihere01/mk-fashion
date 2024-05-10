@@ -69,14 +69,14 @@
             <div class="form-container">
                 <form action="./add-user-qry.php" method="POST" enctype="multipart/form-data" class="row">
 
-                    <div class="col-lg-4 mb-2">
-                        <label class="form-label" for="name">Name <span class="text-danger">*</span>
+                    <div class="col-lg-6 mb-2">
+                        <label class="form-label" for="username">User Name <span class="text-danger">*</span>
                         </label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter here..." required>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter here..." required>
                     </div>
 
 
-                    <div class="col-lg-4 mb-2">
+                    <div class="col-lg-6 mb-2">
                         <label class="form-label" for="email">Email <span class="text-danger">*</span>
                         </label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="Enter here..." required>
@@ -85,7 +85,7 @@
                     <div class="col-lg-4 mb-2">
                         <label class="form-label" for="mobile">Mobile <span class="text-danger">*</span>
                         </label>
-                        <input type="number" class="form-control" id="mobile" name="mobile" placeholder="Enter here..." required>
+                        <input type="number" class="form-control" id="mobile" name="mobile" data-inputmask="'mask':'9999-99999999'" placeholder="XXXX-XXXXXXX" required>
                     </div>
 
                     <div class="col-lg-4">
@@ -94,12 +94,7 @@
                         <input type="password" class="form-control" id="password" name="password" placeholder="Enter here..." required>
                     </div>
 
-                    <div class="col-lg-4">
-                        <label class="form-label" for="address">Address <span class="text-danger">*</span>
-                        </label>
-                        <input type="text" class="form-control" id="address" name="address" placeholder="Enter here..." required>
-                    </div>
-
+   
 
                     <div class="col-lg-4 mb-2">
                         <label class="form-label" for="image">Image <span class="text-danger">*</span>
@@ -107,11 +102,7 @@
                         <input type="file" class="form-control" id="image" name="image" placeholder="Enter here..." required>
                     </div>
 
-                    <div class="col-lg-12 mb-2">
-                        <label class="form-label" for="des">Description <span class="text-danger">*</span>
-                        </label>
-                        <textarea name="description" class="form-control" id="des" rows="3"></textarea>
-                    </div>
+                 
 
                     <div class="offset-8 col-lg-4 mb-2">
                         <label for=""></label>
@@ -131,6 +122,15 @@
 
     <!-- javascript links include -->
     <?php require_once("./includes/javascript-links.php")  ?>
+    
+    <!-- masking files and function start -->
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.inputmask.bundle.js"></script>
+
+    <script>
+        $(":input").inputmask();
+    </script>
     <script>
         $(document).ready(function() {
             setTimeout(function() {
