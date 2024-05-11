@@ -65,7 +65,7 @@
                             
                             <div class="row my-2">
                                 <div class="col-12 text-center">
-                                    <button class="btn btn-danger px-5">Edit Profile <i class="fa fa-edit"></i></button>
+                                    <a href="./profile-edit.php?= $row['id'] ?>"><button class="btn btn-danger px-5">Edit Profile <i class="fa fa-edit"></i></button></a>
                                 </div>
                             </div>
                         </div>

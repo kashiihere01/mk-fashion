@@ -97,7 +97,7 @@
                     <nav class="header__menu">
                         <ul>
                             <li class="active"><a href="./index.php">Home</a></li>
-                            <li><a href="products.php">Shop</a></li>
+                            <li><a href="products.php">Products</a></li>
                             <li><a href="about.php">About</a></li>
                            
                             <li><a href="contact.php">Contact</a></li>

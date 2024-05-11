@@ -90,14 +90,12 @@
                        
                                     <td>
                         <?php if($row['status'] == 1){
-                        echo "<span class='badge bg-success text-white'>Available</span>";
+                        echo "<span class='badge bg-success text-white'>Best seller</span>";
                     }
                     else if($row['status'] == 2){
                         echo "<span class='badge bg-warning text-white'>Latest</span>";
                     }
-                    else if($row['status'] == 0){
-                        echo "<span class='badge bg-danger text-white'>out of stock</span>";
-                    }
+                 
                     else{
                         echo "<span class='badge bg-danger'>out of stock</span>";
                     }
@@ -107,8 +105,8 @@
                                             <button type="button" class="btn btn-success text-white dropdown-toggle" data-toggle="dropdown">Actions</button>
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="product-edit.php?id=<?= $row['id'] ?>"><i class="fa fa-edit"></i> Edit</a>
-                                                <a class="dropdown-item" href="avaible.php?id=<?= $row['id'] ?>"></i> Available</a>
-                                                <a class="dropdown-item" href="unavaible.php?id=<?= $row['id'] ?>"></i> Out of Stock</a>
+                                                <a class="dropdown-item" href="best_seller.php?id=<?= $row['id'] ?>"></i> Best seller</a>
+
                                                 <a class="dropdown-item" href="latest.php?id=<?= $row['id'] ?>"></i> Latest</a>
                                                 <a class="dropdown-item" href="product-delete-qry.php?id=<?= $row['id'] ?>"><i class="fa fa-trash"></i> Delete</a>
                                             </div>

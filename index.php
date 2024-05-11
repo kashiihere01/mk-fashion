@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -36,18 +34,22 @@
     <section class="categories">
         <div class="container">
             <div class="row">
-            <div class="section-title product__discount__title">
+                <div class="section-title product__discount__title">
                     <h2>Lastest Product</h2>
                 </div>
                 <div class="categories__slider owl-carousel">
-                    <?php while ($row = mysqli_fetch_assoc($latestProducts) ) { ?>
+                    <?php while ($row = mysqli_fetch_assoc($latestProducts)) { ?>
                         <div class="col-lg-3">
                             <div class="categories__item set-bg" data-setbg="<?php echo getImageUrl("product", $row['product_image']) ?>">
-                                
+                            <ul class="featured__item__pic__hover">
+                                    
+                                    <li><a href="product-details.php?pid=<?= $pt['id']?>"><i class="fa fa-retweet"></i></a></li>
+                                   
+                                </ul>
                             </div>
                         </div>
                     <?php }
-                    
+
                     ?>
 
                 </div>
@@ -75,9 +77,9 @@
                         <div class="featured__item">
                             <div class="featured__item__pic set-bg" data-setbg="<?php echo getImageUrl("product", $pt['product_image']) ?>">
                                 <ul class="featured__item__pic__hover">
-                                    
-                                    <li><a href="product-details.php?pid=<?= $pt['id']?>"><i class="fa fa-retweet"></i></a></li>
-                                   
+
+                                    <li><a href="product-details.php?pid=<?= $pt['id'] ?>"><i class="fa fa-retweet"></i></a></li>
+
                                 </ul>
                             </div>
                             <div class="featured__item__text">
@@ -146,9 +148,9 @@
     </div>
     <!-- end latest post slider-->
 
-    
-                             
-                             
+
+
+
     <!-- footer includes -->
     <?php require_once("./includes/footer.php")  ?>
 

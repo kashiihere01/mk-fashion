@@ -62,11 +62,18 @@
         $sql_latest = "SELECT * FROM products WHERE `status`= 2";
             $result_latest = mysqli_query($con, $sql_latest);
 
-            //@todo  check if products are null then return false or null
+         
 return $result_latest;
     }
 
+    function getBestseller($con) {
 
+        $sql_bestseller = "SELECT * FROM products WHERE `status`= 1";
+            $result_bestseller = mysqli_query($con, $sql_bestseller);
+
+            //@todo  check if products are null then return false or null
+return $result_bestseller;
+    }
     
     function getnextProducts($con, $category = null, $id = null) {
 

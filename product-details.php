@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Ogani | Shop Details</title>
+    <title>Mk Fashion | Product Details</title>
 
     <!-- css links include -->
     <?php require_once("./includes/css-links.php") ?>
