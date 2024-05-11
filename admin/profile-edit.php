@@ -20,7 +20,7 @@ if (mysqli_num_rows($result) > 0) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Edit Products</title>
+    <title>Edit Profile</title>
 
     <!-- css-links include -->
     <?php require_once("./includes/css-links.php") ?>
@@ -44,9 +44,15 @@ if (mysqli_num_rows($result) > 0) {
     <div class="container mt-3 bg-white p-4">
 
         <div class="row">
-            <div class="col-md-4">
-                <h3> <i class="fa fa-plus text-success"></i> Add User</h3>
+         
+                <div class="col-md-6">
+                    <h3> <i class="fa fa-edit text-success"></i> Edit Profile</h3>
+                </div>
+                <div class="col-md-6 d-flex justify-content-end">
+                    <img src="./images/admin-users/<?= $row['image'] ?>" class="" height="50px">
+                </div>
             </div>
+            <hr>
             <div class="col-md-8">
                 <?php
 
@@ -99,13 +105,13 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="col-lg-4 mb-2">
                     <label class="form-label" for="mobile">Mobile <span class="text-danger">*</span>
                     </label>
-                    <input type="number" class="form-control" id="mobile" name="mobile" data-inputmask="'mask':'9999-99999999'" placeholder="XXXX-XXXXXXX" required>
+                    <input type="number" class="form-control" id="mobile" name="mobile" value="<?= $row['image'] ?>" data-inputmask="'mask':'9999-99999999'" placeholder="XXXX-XXXXXXX" required>
                 </div>
 
                 <div class="col-lg-4">
                     <label class="form-label" for="password">Password <span class="text-danger">*</span>
                     </label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter here..." required>
+                    <input type="password" class="form-control" value="<?= $row['password'] ?>" id="password" name="password" placeholder="Enter here..." required>
                 </div>
 
 

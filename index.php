@@ -41,10 +41,10 @@
                     <?php while ($row = mysqli_fetch_assoc($latestProducts)) { ?>
                         <div class="col-lg-3">
                             <div class="categories__item set-bg" data-setbg="<?php echo getImageUrl("product", $row['product_image']) ?>">
-                            <ul class="featured__item__pic__hover">
-                                    
-                                    <li><a href="product-details.php?pid=<?= $pt['id']?>"><i class="fa fa-retweet"></i></a></li>
-                                   
+                                <ul class="featured__item__pic__hover">
+
+                                    <li><a href="product-details.php?pid=<?= $pt['id'] ?>"><i class="fa fa-retweet"></i></a></li>
+
                                 </ul>
                             </div>
                         </div>
@@ -120,12 +120,8 @@
     <!-- start latest post slider -->
     <div class="container mt-5">
         <div class="col-lg-12 col-md-7">
-            <div class="product__discount">
-                <div class="section-title product__discount__title">
-                    <h2>Product Categories</h2>
-                </div>
-                <section class="categories">
-                    <div class="container">
+        <section class="categories">
+                    <div class="container mb-5">
                         <div class="row">
                             <div class="categories__slider owl-carousel">
                                 <?php while ($row = mysqli_fetch_assoc($cats)) { ?>
@@ -139,13 +135,13 @@
                                 ?>
 
                             </div>
-                        </div>
+        </div>
+
                     </div>
                 </section>
-            </div>
-        </div>
-    </div>
-    </div>
+                </div>
+                </div>
+  
     <!-- end latest post slider-->
 
 

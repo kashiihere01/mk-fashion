@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // save info into db
         $imgName = $data['result'];
 
-        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $password = $_POST['password'];
 
         $query = "INSERT INTO `users`(`username`, `email`, `password`, `mobile`, `image`) 
             VALUES ('$_POST[username]','$_POST[email]' ,'$password','$_POST[mobile]' , '$imgName')";

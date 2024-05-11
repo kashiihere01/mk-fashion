@@ -42,9 +42,9 @@
                             <button type="submit" class="site-btn">Subscribe</button>
                         </form>
                         <div class="footer__widget__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                         
+                            <a href="#"><i class="fa fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/m.k_fashion_house"><i class="fa fa-instagram"></i></a>
+                            <a href="https://youtube.com/@mkfashionhouse1715?si=Fyqz_1IRSxDQKpL1"><i class="fa fa-whatsapp"></i></a>
                         </div>
                     </div>
                 </div>
