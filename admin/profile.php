@@ -31,6 +31,7 @@
             <div class="me-2">
                 <a href="./add-user.php" class="btn btn-success text-white"><i class="fa fa-plus"></i> Add Users</a>
             </div>
+                  
             <div class="ms-3">
                 <a href="./add-user.php" class="btn btn-success text-white"><i class="fa fa-plus"></i> Add Users</a>
             </div>
@@ -48,7 +49,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex flex-column  mb-4">
-                                <img class="mx-auto" src="images/avatar/11.png" width="80" height="80" alt="">
+                                <img class="mx-auto rounded-circle" src="./images/admin-users/<?= $row['image'] ?>" width="80" height="80" alt="">
                                 <div class="media-body text-center">
                                     <h3 class="mb-0"><?= $_SESSION['user_name'] ?></h3>
                                 </div>
@@ -65,7 +66,7 @@
                             
                             <div class="row my-2">
                                 <div class="col-12 text-center">
-                                    <a href="./profile-edit.php?= $row['id'] ?>"><button class="btn btn-danger px-5">Edit Profile <i class="fa fa-edit"></i></button></a>
+                                    <a href="profile-edit.php?id=<?= $row['id'] ?>"><button class="btn btn-danger px-5">Edit Profile <i class="fa fa-edit"></i></button></a>
                                 </div>
                             </div>
                         </div>

@@ -87,25 +87,25 @@ if (mysqli_num_rows($result) > 0) {
         <hr>
 
         <div class="form-container">
-            <form action="./add-user-qry.php" method="POST" enctype="multipart/form-data" class="row">
+            <form action="./profile-update-qry.php" method="POST" enctype="multipart/form-data" class="row">
             <input type="hidden" name="id" value="<?= $get_user_id ?>">
                 <div class="col-lg-6 mb-2">
                     <label class="form-label" for="username">User Name <span class="text-danger">*</span>
                     </label>
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter here..." required>
+                    <input type="text" class="form-control" id="username" value="<?= $row['username'] ?>" name="username" placeholder="Enter here..." required>
                 </div>
 
 
                 <div class="col-lg-6 mb-2">
                     <label class="form-label" for="email">Email <span class="text-danger">*</span>
                     </label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter here..." required>
+                    <input type="email" class="form-control" id="email" name="email" value="<?= $row['email'] ?>" placeholder="Enter here..." required>
                 </div>
 
                 <div class="col-lg-4 mb-2">
                     <label class="form-label" for="mobile">Mobile <span class="text-danger">*</span>
                     </label>
-                    <input type="number" class="form-control" id="mobile" name="mobile" value="<?= $row['image'] ?>" data-inputmask="'mask':'9999-99999999'" placeholder="XXXX-XXXXXXX" required>
+                    <input type="number" class="form-control" id="mobile" value="<?= $row['mobile'] ?>" name="mobile" value="<?= $row['image'] ?>" data-inputmask="'mask':'9999-99999999'" placeholder="XXXX-XXXXXXX" required>
                 </div>
 
                 <div class="col-lg-4">
