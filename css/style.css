@@ -54,6 +54,18 @@ h1 {
 	font-size: 70px;
 }
 
+.call-icons{
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+
+.wa-icons{
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+}
+
 h2 {
 	font-size: 36px;
 }

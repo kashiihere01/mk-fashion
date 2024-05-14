@@ -5,6 +5,19 @@
 
     <title>MK Fashion | Home</title>
 
+    <style>
+      .call-icons{
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+      }
+
+      .wa-icons{
+        position: fixed;
+        bottom: 25px;
+        left: 25px;
+      }
+    </style>
     <!-- css links include -->
     <?php require_once("./includes/css-links.php") ?>
 </head>
@@ -28,8 +41,12 @@
 
 
     ?>
+ 
+          <!-- Call Button -->
+          <img src="./img/call.png" class="call-icons"  height="50px"  onclick="openCallDial()">
 
-
+<!-- WhatsApp Button -->
+  <img src="./img/whatsapp.png" class="wa-icons" height="50px" onclick="openWhatsAppChat()">
     <!-- Latest Section Begin -->
     <section class="categories">
         <div class="container">
@@ -154,7 +171,7 @@
     <!-- js links includes -->
 
     <?php require_once("./includes/javascript-links.php") ?>
-
+   
 
 
 </body>
