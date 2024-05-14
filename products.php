@@ -125,37 +125,42 @@
         </div>
         <!-- product end -->
 
-
         <?php
+    // Total number of products
+    $totalProducts = mysqli_num_rows($products);
 
-// Total number of products
-$totalProducts = mysqli_num_rows($products);
+    // Number of products per page
+    $productsPerPage = 4; // You can adjust this as needed
 
-// Number of products per page
-$productsPerPage = 4; // You can adjust this as needed
+    // Calculate total pages
+    $totalPages = ceil($totalProducts / $productsPerPage);
 
-// Calculate total pages
-$totalPages = ceil($totalProducts / $productsPerPage);
+    // Get current page number, default to 1 if not set
+    $currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
 
-// Get current page number, default to 1 if not set
-$currentpage = isset($_GET['page']) ? $_GET['page'] : 1;
+    // Calculate the offset for the query
+    $offset = ($currentPage - 1) * $productsPerPage;
 
-// Calculate the offset for the query
-$offset = ($currentpage - 1) * $productsPerPage;
+    // Modify your query to include LIMIT and OFFSET
+    $query = "SELECT * FROM products LIMIT $offset, $productsPerPage";
+    $result = mysqli_query($con, $query);
 
-// Modify your query to include LIMIT and OFFSET
-$query = "SELECT * FROM products LIMIT $offset, $productsPerPage";
-$result = mysqli_query($con, $query);
+    // Display products
+    while ($pt = mysqli_fetch_assoc($result)) {
+        // Your product display code here
+    }
 
-
-// Generate pagination links
-echo '<div class="product__pagination">';
-for ($i = 1; $i <= $totalPages; $i++) {
-    echo '<a href="products.php?page=' . $i . '">' . $i . '</a>';
-}
-echo '</div>';
+    // Generate pagination links
+    echo '<div class="product__pagination">';
+    for ($i = 1; $i <= $totalPages; $i++) {
+        // Add active class for the current page
+        $activeClass = ($currentPage == $i) ? 'active' : '';
+        echo '<a class="' . $activeClass . '" href="products.php?page=' . $i . '">' . $i . '</a>';
+    }
+    echo '</div>';
 ?>
 
+      
     </div>
     </div>
     </div>
