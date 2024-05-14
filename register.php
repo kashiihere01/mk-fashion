@@ -19,50 +19,30 @@
          <div class="title">
             Signup Form
          </div>
-         <?php
-                        session_start();
-                        if (!empty($_SESSION['error'])) {
-                            $msg = $_SESSION['error'];
-                            echo " <div class='alert alert-danger alert-dismissible fade show credErr'>
-                            <button type='button' class='btn-close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span>
-                            </button> <strong>Warning! </strong> $msg</div>";
-                        }
-                        unset($_SESSION['error']);
-
-
-                        if (!empty($_SESSION['invalid'])) {
-                            $msg = $_SESSION['invalid'];
-                            echo " <div class='alert alert-danger alert-dismissible fade show credErr'>
-                            <button type='button' class='btn-close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span>
-                            </button> <strong>Warning! </strong> $msg</div>";
-                        }
-                        unset($_SESSION['invalid']);
-
-                        ?>
-         <form action="signup-qry.php" method="POST">
+      
+         <form action="sign-up-qry.php" method="POST">
             <div class="field " >
-               <input type="text" name="username"  placeholder="email">
-               <label></label>
+               <input type="text" name="name"  placeholder="Enter Your Name">
+               <label>Enter Your Name</label>
             </div>
             <div class="field " >
-               <input type="email" name="email"  placeholder="email">
-               <label>Email Address</label>
+               <input type="text" name="email"  placeholder="Enter Your Name">
+               <label>Enter Your Email</label>
             </div>
             <div class="field " >
-               <input type="email" name="email"  placeholder="email">
-               <label>Email Address</label>
+               <input type="text" name="city"  placeholder="City">
+               <label>Enter City</label>
             </div>
             <div class="field " >
-               <input type="email" name="email"  placeholder="email">
-               <label>Email Address</label>
-            </div>
-            <div class="field">
-               <input type="password" name="password" required>
+               <input type="password" name="password"  placeholder="email">
                <label>Password</label>
             </div>
-          
+            <div class="field " >
+               <input type="number" name="mobile"  placeholder="Enter Your mobile">
+               <label>Enter Your Mobile</label>
+            </div>
             <div class="field">
-               <input type="submit" name="login" value="Login">
+               <input type="submit" name="signup" value="signup">
             </div>
             <div class="signup-link">
                Have an account? <a href="login.php">Login now</a>

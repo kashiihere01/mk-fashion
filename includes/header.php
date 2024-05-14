@@ -1,6 +1,8 @@
+
 <?php
+session_start();
 require_once("db-con.php");
-require_once("helpers.php")
+require_once("helpers.php");
 ?>
 
 <!-- Page Preloder -->
@@ -12,25 +14,39 @@ require_once("helpers.php")
 <div class="humberger__menu__overlay"></div>
 <div class="humberger__menu__wrapper">
     <div class="humberger__menu__logo">
-        <a href="#"><img src="img/logo.png" alt=""></a>
+  
+                    <a href="./index.php"><img src="img/logo.png" alt="" ></a>
+                
     </div>
-    <div class="humberger__menu__cart">
-        <ul>
-            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
-        </ul>
-        
-    </div>
+  
     <div class="humberger__menu__widget">
 
-        <div class="header__top__right__auth">
-            <a href="login.php"><i class="fa fa-user"></i> Login</a>
-            
-        </div>
-        <div class="header__top__right__auth">
-            <a href="register.php"> | <i class="fa fa-user"></i> Register</a>
-            
-        </div>
+                               
+    <?php
+
+if (isset($_SESSION['login']) && $_SESSION['login'] == true) {
+    echo " <div class='header__top__right__auth'>
+  <a href='login.php'><i class='fa fa-user'></i> My Account</a>
+
+</div>
+| 
+<div class='header__top__right__auth'>
+  <a href='login.php'> Logout <i class='fa fa-sign-out' aria-hidden='true'></i></a>
+
+</div>
+";
+} else {
+    echo '              <div class="header__top__right__auth">
+<a href="login.php"><i class="fa fa-user"></i> Login</a>
+
+</div>
+<div class="header__top__right__auth">
+<a href="register.php">| <i class="fa fa-user"></i> Register</a>
+
+</div>';
+}
+
+?>
     </div>
     <nav class="humberger__menu__nav mobile-menu">
         <ul>
@@ -42,10 +58,10 @@ require_once("helpers.php")
     </nav>
     <div id="mobile-menu-wrap"></div>
     <div class="header__top__right__social">
-        <a href="#"><i class="fa fa-whatsapp"></i></a>
-        <a href="#"><i class="fa fa-instagram"></i></a>
-        <a href="#"><i class="fa fa-youtube"></i></a>
-        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+    <a href="#"><i class="fa fa-whatsapp"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-youtube"></i></a>
+                            <a href="#"><img src="img/tiktok.png" alt="" height="22px"></a>
     </div>
     <div class="humberger__menu__contact">
         <ul>
@@ -75,17 +91,36 @@ require_once("helpers.php")
                             <a href="#"><i class="fa fa-whatsapp"></i></a>
                             <a href="#"><i class="fa fa-instagram"></i></a>
                             <a href="#"><i class="fa fa-youtube"></i></a>
-                            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                            <a href="#"><img src="img/tiktok.png" alt="" height="22px"></a>
                         </div>
+                        
+                        <?php
 
-                        <div class="header__top__right__auth">
-                            <a href="login.php"><i class="fa fa-user"></i> Login</a>
-                      
-                        </div>
-                        <div class="header__top__right__auth">
-            <a href="register.php">| <i class="fa fa-user"></i> Register</a>
-            
-        </div>
+                        if (isset($_SESSION['login']) && $_SESSION['login'] == true) {
+                            echo " <div class='header__top__right__auth'>
+                          <a href='profile.php'><i class='fa fa-user'></i> My Account</a>
+                    
+                      </div>
+                       | 
+                      <div class='header__top__right__auth'>
+                          <a href='logout.php'> Logout <i class='fa fa-sign-out' aria-hidden='true'></i></a>
+                    
+                      </div>
+                      ";
+                        } else {
+                            echo '              <div class="header__top__right__auth">
+<a href="login.php"><i class="fa fa-user"></i> Login</a>
+
+</div>
+<div class="header__top__right__auth">
+<a href="register.php">| <i class="fa fa-user"></i> Register</a>
+
+</div>';
+                        }
+
+                        ?>
+
+
                     </div>
                 </div>
             </div>
@@ -95,7 +130,8 @@ require_once("helpers.php")
         <div class="row">
             <div class="col-lg-3">
                 <div class="header__logo">
-                    <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                <a href="./index.php"><img src="img/logo.png" alt=""></a>
+
                 </div>
             </div>
             <div class="col-lg-6">
@@ -112,8 +148,7 @@ require_once("helpers.php")
             <div class="col-lg-3">
                 <div class="header__cart">
                     <ul>
-                        <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                        <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                        
                     </ul>
                 </div>
             </div>

@@ -89,10 +89,10 @@
                                     <td><img src="./images/product/<?php echo $row['product_image'] ?>" alt="Product Image" height="60px"></td>
                        
                                     <td>
-                        <?php if($row['status'] == 1){
+                        <?php if($row['status'] == 2){
                         echo "<span class='badge bg-success text-white'>Best seller</span>";
                     }
-                    else if($row['status'] == 2){
+                    else if($row['status'] == 1){
                         echo "<span class='badge bg-warning text-white'>Latest</span>";
                     }
                  
