@@ -35,7 +35,7 @@ require_once "./auth.php";
 
         <!-- view categories container -->
         <div class="container mt-3 bg-white p-4">
-            <h3> <i class="fa fa-eye text-success"></i> View users</h3>
+            <h3> <i class="fa fa-eye text-success"></i> View Customers</h3>
             <hr>
 
 
@@ -70,8 +70,8 @@ require_once "./db-con.php";
                                         <div class="dropdown">
                                             <button type="button" class="btn btn-success text-white dropdown-toggle" data-toggle="dropdown">Actions</button>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="category-edit.php?id=<?= $row['id'] ?>"><i class="fa fa-edit"></i> Edit</a>
-                                                <a class="dropdown-item" href="category-delete-qry.php?id=<?= $row['id'] ?>"><i class="fa fa-trash"></i> Delete</a>
+
+                                                <a class="dropdown-item" href="customer-delete.php?id=<?= $row['id'] ?>"><i class="fa fa-trash"></i> Delete</a>
                                             </div>
                                         </div>
                                     </td>

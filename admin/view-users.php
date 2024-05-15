@@ -48,7 +48,9 @@
             </div>
 
             <hr>
-
+            <div class="d-flex justify-content-end">
+                <a href="./add-user.php" class="btn btn-success text-white"><i class="fa fa-plus"></i> Add Users</a>
+            </div>
             
 
             <div class="table-responsive">
@@ -101,10 +103,10 @@
                                         <div class="dropdown">
                                             <button type="button" class="btn btn-success text-white dropdown-toggle" data-toggle="dropdown">Actions</button>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="user-edit-qry.php?id=<?= $row['id'] ?>"><i class="fa fa-edit"></i> Edit</a>
+
                                                 <a class="dropdown-item" href="active.php?id=<?= $row['id'] ?>"> Active</a>
                                                 <a class="dropdown-item" href="inactive.php?id=<?= $row['id'] ?>"> Inactive</a>
-                                                <a class="dropdown-item" href="user-delete-qry.php?id=<?= $row['id'] ?>"><i class="fa fa-trash"></i> Delete</a>
+                                                <a class="dropdown-item" href="delete-users.php?id=<?= $row['id'] ?>"><i class="fa fa-trash"></i> Delete</a>
                                             </div>
                                         </div>
                                     </td>

@@ -5,6 +5,19 @@
 
     <title>Mk Fashion | Products</title>
 
+    <style>
+      .call-icons{
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+      }
+
+      .wa-icons{
+        position: fixed;
+        bottom: 25px;
+        left: 25px;
+      }
+    </style>
     <!-- css links include -->
     <?php require_once("./includes/css-links.php") ?>
 
@@ -29,6 +42,11 @@
 
 
     ?>
+     <!-- Call Button -->
+     <img src="./img/call.png" class="call-icons"  height="50px"  onclick="openCallDial()">
+
+<!-- WhatsApp Button -->
+  <img src="./img/whatsapp.png" class="wa-icons" height="50px" onclick="openWhatsAppChat()">
     <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
         <div class="container">
@@ -175,7 +193,19 @@
     <!-- javascript lins include -->
     <?php require_once("./includes/javascript-links.php") ?>
 
+    <script>
+    // Function to open call dialer
+function openCallDial() {
+  // Replace '123456789' with the actual phone number you want to call
+  window.location.href = 'tel:+123456789';
+}
 
+// Function to open WhatsApp chat
+function openWhatsAppChat() {
+  // Replace '123456789' with the actual phone number you want to chat with
+  window.location.href = 'https://wa.me/123456789';
+}
+   </script>
 
 </body>
 

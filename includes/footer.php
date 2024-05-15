@@ -27,7 +27,7 @@
                         <ul>
                         <li><a href="about.php">About Our Shop</a></li>
                           
-                          
+                        <li><a href="admin/login.php">admin</a></li>
                             <li><a href="contact.php">Contact</a></li>
                           
                         </ul>
