@@ -175,13 +175,13 @@
     // Function to open call dialer
 function openCallDial() {
   // Replace '123456789' with the actual phone number you want to call
-  window.location.href = 'tel:+123456789';
+  window.location.href = 'tel:++923470069802';
 }
 
 // Function to open WhatsApp chat
 function openWhatsAppChat() {
   // Replace '123456789' with the actual phone number you want to chat with
-  window.location.href = 'https://wa.me/123456789';
+  window.location.href = 'https://wa.me/+923470069802';
 }
    </script>
 

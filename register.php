@@ -19,7 +19,26 @@
          <div class="title">
             Signup Form
          </div>
-      
+         <?php
+                        session_start();
+                        if (!empty($_SESSION['error'])) {
+                            $msg = $_SESSION['error'];
+                            echo " <div class='alert alert-danger alert-dismissible fade show credErr'>
+                            <button type='button' class='btn-close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span>
+                            </button> <strong>Warning! </strong> $msg</div>";
+                        }
+                        unset($_SESSION['error']);
+
+
+                        if (!empty($_SESSION['invalid'])) {
+                            $msg = $_SESSION['invalid'];
+                            echo " <div class='alert alert-danger alert-dismissible fade show credErr'>
+                            <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span>
+                            </button> <strong>Warning! </strong> $msg</div>";
+                        }
+                        unset($_SESSION['invalid']);
+
+                        ?>
          <form action="sign-up-qry.php" method="POST">
             <div class="field " >
                <input type="text" name="name"  placeholder="Enter Your Name">

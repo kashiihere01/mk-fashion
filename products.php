@@ -102,13 +102,7 @@
         </div>
         <div class="row">
             <div class="col-lg-4 col-md-5">
-                <div class="filter__sort">
-                    <span>Sort By</span>
-                    <select>
-                        <option value="0">Default</option>
-                        <option value="0">Default</option>
-                    </select>
-                </div>
+           
             </div>
             <div class="col-lg-4 col-md-4">
                 <div class="filter__found">
@@ -122,7 +116,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 mix <?php $ptc = getCategroyById($con, $pt['category_id']);
                                                                 echo $ptc['category'] ?>">
                         <div class="featured__item">
-                            <div class="featured__item__pic set-bg" data-setbg="<?php echo getImageUrl("product", $pt['product_image']) ?>">
+                            <div class="featured__item__pic set-bg" data-setbg="<?php echo getImageUrl("product", $row['product_image']) ?>">
                                 <ul class="featured__item__pic__hover">
 
                                     <li><a href="product-details.php?pid=<?= $pt['id'] ?>"><i class="fa fa-retweet"></i></a></li>
